@@ -15,7 +15,7 @@ class TrombinoscopeController extends Zend_Controller_Action
 
     public function samszoAction()
     {
-        // action body
+    	$this->view->data = "bonjour";
     }
     
     
