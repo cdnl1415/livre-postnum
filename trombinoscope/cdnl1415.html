@@ -2,10 +2,31 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Trombinoscope CDNL 14-15</title>
+	    <script type="text/javascript" src="../public/js/d3.js"></script>
+	    <script type="text/javascript" src="../public/js/queue.v1.min.js" ></script>
 		<script type="text/javascript">
 
+		var ficSVG = "../svg/CrolusLouisTrombi.svg";
 		
-		
+		function load(){
+		 	//charge l'IHM SVG
+		 	chargeIHM();
+
+		}
+
+		//charge le svg
+	    //merci à http://bl.ocks.org/KoGor/8162640
+	    function chargeIHM(){
+	    	queue()
+	    		.defer(d3.xml, ficSVG, "image/svg+xml")
+	    		.await(IHMcharge);
+	    }
+	    function IHMcharge(error, xml){
+	    	//Adding our svg file to HTML document
+			var importedNode = document.importNode(xml.documentElement, true);
+    	  	d3.select("#viz").node().appendChild(importedNode);	    	    	  	
+	    }		
+	    
 		// fonction pour ajouter un écouteur à UN ÉLÉMENT
 		//merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
 		function ajoutelesevenementauxelements() { 
@@ -33,7 +54,7 @@
 
 		</script>
 	</head>
-	<body onload="ajoutelesevenementauxelements();">
-	
+	<body onload="load();">
+		<div id="viz" ></div>
 	</body>
 </html>
