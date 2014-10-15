@@ -18,6 +18,9 @@ class TrombinoscopeController extends Zend_Controller_Action
     	$this->view->data = "bonjour";
     }
     
+    public function masseixkevinAction(){
+    }
+    
     
 }
 
