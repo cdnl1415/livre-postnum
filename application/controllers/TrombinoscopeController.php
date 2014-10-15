@@ -28,7 +28,12 @@ class TrombinoscopeController extends Zend_Controller_Action
     public function mehdiamaskaneAction(){
     
     }
+    
 	public function zinebslaouiAction(){
+    
+    }
+
+	public function zamenmouhanedAction(){
     
     }
     
