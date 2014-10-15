@@ -1,0 +1,63 @@
+<style>
+    a:link,
+    a:visited
+    {
+        color: #0398CA;
+    }
+
+    span#zf-name
+    {
+        color: #91BE3F;
+    }
+
+    div#welcome
+    {
+        color: #FFFFFF;
+        background-image: url(http://framework.zend.com/images/bkg_header.jpg);
+        width:  600px;
+        height: 400px;
+        border: 2px solid #444444;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    div#more-information
+    {
+        background-image: url(http://framework.zend.com/images/bkg_body-bottom.gif);
+        height: 100%;
+    }
+</style>
+<div id="welcome">
+    <h1>Welcome to the <span id="zf-name">Zend Framework!</span></h1>
+
+    <h3>  Mouhaned</h3>
+
+<?php
+
+$xml = simplexml_load_file('https://picasaweb.google.com/data/feed/base/user/107401320610499259896/albumid/6065229773950541889?alt=rss&kind=photo&authkey=Gv1sRgCNak7e60l-7VlgE&hl=fr');
+
+echo '<table border="2">';
+echo  "<tr>";
+echo "<td>Photo</td>";
+echo "<td>Nom</td>";
+echo  "</tr>";
+foreach ($xml->channel->item as $tof) 
+{
+		echo "<tr>";
+		echo "<td>";
+
+		
+	echo "<src='".$tof->enclosure["url"]."' />";
+
+	
+	echo "</td>";
+	echo "<td>";
+	
+		echo $tof->title;
+		echo "</td>";
+		echo "</tr>";
+}
+?>
+        </p>
+    </div>
+</div>
