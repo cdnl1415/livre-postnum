@@ -2,7 +2,38 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Trombinoscope CDNL 14-15</title>
+	    <script type="text/javascript" src="../public/js/d3.js"></script>
+	    <script type="text/javascript" src="../public/js/queue.v1.min.js" ></script>
 		<script type="text/javascript">
+
+		var ficSVG = "../svg/CrolusLouisTrombi.svg";
+		
+		function load(){
+		 	//charge l'IHM SVG
+		 	chargeIHM();
+
+		}
+
+		//charge le svg
+	    //merci à http://bl.ocks.org/KoGor/8162640
+	    function chargeIHM(){
+	    	queue()
+	    		.defer(d3.xml, ficSVG, "image/svg+xml")
+	    		.await(IHMcharge);
+	    }
+	    function IHMcharge(error, xml){
+	    	//Adding our svg file to HTML document
+			var importedNode = document.importNode(xml.documentElement, true);
+    	  	d3.select("#viz").node().appendChild(importedNode);	    	    	  	
+	    }		
+	    
+		// fonction pour ajouter un écouteur à UN ÉLÉMENT
+		//merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
+		function ajoutelesevenementauxelements() { 
+		     var el = document.getElementById("rect12259"); 
+		     el.addEventListener("click", afficheDetailEtu, false); 
+		   } 		
+		
 		/*
 		 merci à http://www.commentcamarche.net/forum/affich-21135416-html-afficher-cacher-une-div-sur-clique-a
 		 */
@@ -14,17 +45,16 @@
 			else
 				divInfo.style.display = 'none';
 		}
+		
+		function afficheDetailEtu(){
+			alert("OK");
+			//var elemEtu = document.getElementById('g16893');
+			
+		}
+
 		</script>
 	</head>
-	<body>
-		<img onclick="switchInfoPerso()" src="../img/CAM00029.jpg" />
-		<div onmouseover="alert('salut')" id="divacacher" style="display: none;">Simon	TSCHAN	6	3		professionnel	professionnel	novice	novice	novice	novice	base	novice	novice	novice	novice	base	novice	novice	novice	novice	novice	base	novice	novice	novice	novice		novice	novice	base	novice	novice	base	novice	novice	novice	novice	novice	novice	novice	novice	novice	novice	professionnel		"maîtriser pleinement tout les outils à l'issue de cette année.  
-		"	"bac STL chimie
-		licence arts plastiques
-		M1 art et enseignement "	Création sites web et book complet dès cette année.	"webdesign
-		directeur artistique
-		secteur culturel et artistique"	base	expert	novice	novice	novice	novice	tschan.omis@gmail.com
-		</div> 
-		<img src="https://lh4.googleusercontent.com/8OmSbKNlX4k0VASIjNQfhKb_OmsD6pXx7IlF2O8KbEE=w145-h192-p-no" class="Bea VLb" style="width: 145px; height: 192px; margin-top: 0px; margin-left: 0px;" alt="Photo">
+	<body onload="load();">
+		<div id="viz" ></div>
 	</body>
 </html>

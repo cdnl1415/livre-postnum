@@ -10,7 +10,11 @@ defined('APPLICATION_ENV')
 
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
+<<<<<<< HEAD
     realpath(APPLICATION_PATH . '/../../zend/library'),
+=======
+    realpath(APPLICATION_PATH . '/../../library'),
+>>>>>>> origin/master
     get_include_path(),
 )));
 
