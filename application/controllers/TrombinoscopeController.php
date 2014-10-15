@@ -28,11 +28,7 @@ class TrombinoscopeController extends Zend_Controller_Action
     public function mehdiamaskaneAction(){
     
     }
-<<<<<<< HEAD
 	public function zinebslaouiAction(){
-=======
-	public function zamelmouhanedAction(){
->>>>>>> origin/master
     
     }
     
