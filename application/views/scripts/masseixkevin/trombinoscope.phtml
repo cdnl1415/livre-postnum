@@ -9,6 +9,12 @@
 			$xml = simplexml_load_file($url);
 			$i=4;
 			echo "<table>";
+			
+			if(isset($xml->channel->item))
+			{
+				echo "<h1>Trombinoscope des étudiants du master 2 THYP</h1>";
+			}
+			
 			foreach ($xml->channel->item as $photo){
 				if ($i%4 == 0) echo "<tr>";
 				
