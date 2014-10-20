@@ -26,20 +26,20 @@
 	    function IHMcharge(error, xml){
 	    	//Adding our svg file to HTML document
 			var importedNode = document.importNode(xml.documentElement, true);
-    	  	d3.select("#viz").node().appendChild(importedNode);	    	    	  	
+    	  		d3.select("#viz").node().appendChild(importedNode);	    	    	  	
+    	  		ajoutelesevenementauxelements();
 	    }		
 	    
 		// fonction pour ajouter un écouteur à UN ÉLÉMENT
 		//merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
 		function ajoutelesevenementauxelements() { 
 		
-		for (i = 0; i < arrIds.length; i++) {
-			text += car[i] + "<br>"
-		//length = taille du tableau
-		     var el = document.getElementById(arrIds[i]); 
-		     el.addEventListener("click", afficheDetailEtu, false); 
-		   } 		
-		
+			for (i = 0; i < arrIds.length; i++) {
+			//length = taille du tableau
+			     var el = document.getElementById(arrIds[i]); 
+			     el.addEventListener("click", afficheDetailEtu, false); 
+			} 		
+		}
 		/*
 		 merci à http://www.commentcamarche.net/forum/affich-21135416-html-afficher-cacher-une-div-sur-clique-a
 		 */
