@@ -1,195 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Interface" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="1318.5px" height="730.5px" viewBox="0 0 1318.5 730.5" enable-background="new 0 0 1318.5 730.5" xml:space="preserve">
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="800px" height="600px" viewBox="0 0 800 600" enable-background="new 0 0 800 600" xml:space="preserve">
 <g id="Background">
 	<g id="Calque_3">
-		<rect y="0" fill="#E2E2E2" width="1323.707" height="312.421"/>
-		<rect y="312.421" fill="#141414" width="1323.707" height="418.079"/>
+		<rect x="2.957" y="1" fill="#E2E2E2" width="797.043" height="189.082"/>
+		<rect x="2.957" y="190.082" fill="#141414" width="797.043" height="253.027"/>
 	</g>
 </g>
 <g id="PhotoFull">
-	<path fill="#AAC0C1" d="M243.444,695.888V353.865c0-3.521-2.399-5.92-5.92-5.92H64.463c-3.521,0-6.832,2.399-6.832,5.92v342.023
-		H243.444z"/>
-	<text transform="matrix(1 0 0 1 136.915 524.8508)" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="70.0054">?</text>
-	<rect x="61.275" y="400.774" fill="#E2E2E2" width="177.615" height="289.649"/>
-	<rect x="61.275" y="647.614" fill="#383838" width="177.615" height="42.81"/>
-	<text transform="matrix(1 0 0 1 99.1455 387.3347)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="39.6219">CDNL</text>
+	<path fill="#AAC0C1" d="M150.293,422.162V215.165c0-2.131-1.452-3.583-3.583-3.583H41.971c-2.13,0-4.135,1.452-4.135,3.583v206.998
+		H150.293z"/>
+	<text transform="matrix(1 0 0 1 85.8203 318.6484)" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="42.3684">?</text>
+	<rect x="40.042" y="243.555" fill="#E2E2E2" width="107.496" height="175.301"/>
+	<rect x="40.042" y="392.945" fill="#383838" width="107.496" height="25.91"/>
+	<text transform="matrix(1 0 0 1 62.9614 235.4204)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="23.9798">CDNL</text>
 </g>
 <g id="Photo">
-	<rect x="193.714" y="28.692" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.232" height="120.232"/>
-	<rect x="57.998" y="28.692" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.232" height="120.232"/>
-	<rect x="330.341" y="28.692" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="119.321" height="120.232"/>
-	<rect x="465.147" y="28.692" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.232" height="120.232"/>
-	<rect x="600.863" y="28.692" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.231" height="120.232"/>
-	<rect x="736.579" y="28.692" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="119.322" height="120.232"/>
-	<rect x="872.296" y="28.692" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.231" height="120.232"/>
-	<rect x="1008.012" y="28.692" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.232" height="120.232"/>
-	<rect x="57.998" y="165.319" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.232" height="120.232"/>
-	<rect x="193.714" y="165.319" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.232" height="120.232"/>
-	<rect x="330.341" y="165.319" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="119.321" height="120.232"/>
-	<rect x="465.147" y="165.319" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.232" height="120.232"/>
-	<rect x="600.863" y="165.319" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.231" height="120.232"/>
-	<rect x="736.579" y="165.319" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="119.322" height="120.232"/>
-	<rect x="872.296" y="165.319" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.231" height="120.232"/>
-	<rect x="1008.012" y="165.319" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.232" height="120.232"/>
-	<rect x="1141.012" y="28.692" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.232" height="120.232"/>
-	<rect x="1141.012" y="165.319" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="120.232" height="120.232"/>
+	<rect x="120.196" y="18.365" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.767" height="72.767"/>
+	<rect x="38.058" y="18.365" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.767" height="72.767"/>
+	<rect x="202.884" y="18.365" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.215" height="72.767"/>
+	<rect x="284.471" y="18.365" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.766" height="72.767"/>
+	<rect x="366.609" y="18.365" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.764" height="72.767"/>
+	<rect x="448.746" y="18.365" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.216" height="72.767"/>
+	<rect x="530.884" y="18.365" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.767" height="72.767"/>
+	<rect x="613.021" y="18.365" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.767" height="72.767"/>
+	<rect x="38.058" y="101.053" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.767" height="72.767"/>
+	<rect x="120.196" y="101.053" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.767" height="72.767"/>
+	<rect x="202.884" y="101.053" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.215" height="72.767"/>
+	<rect x="284.471" y="101.053" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.766" height="72.767"/>
+	<rect x="366.609" y="101.053" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.764" height="72.767"/>
+	<rect x="448.746" y="101.053" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.216" height="72.767"/>
+	<rect x="530.884" y="101.053" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.767" height="72.767"/>
+	<rect x="613.021" y="101.053" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.767" height="72.767"/>
+	<rect x="693.515" y="18.365" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.768" height="72.767"/>
+	<rect x="693.515" y="101.053" fill="#E2E2E2" stroke="#4C4C4C" stroke-miterlimit="10" width="72.768" height="72.767"/>
 </g>
 <g id="InfoTexte">
-	<rect x="298.77" y="350.677" fill="#1D2121" width="300.73" height="153.933"/>
-	<rect x="298.77" y="521.005" fill="#1D2121" width="300.73" height="173.972"/>
+	<rect x="183.777" y="213.235" fill="#1D2121" width="182.006" height="93.161"/>
+	<rect x="183.777" y="316.32" fill="#1D2121" width="182.006" height="105.291"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 311.0771 371.5276)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">PARCOURS : </text>
+		<text transform="matrix(1.0635 0 0 1 191.2256 225.8545)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">PARCOURS : </text>
 	</g>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 311.0771 542.303)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">PROJETS : </text>
+		<text transform="matrix(1.0635 0 0 1 191.2256 329.209)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">PROJETS : </text>
 	</g>
 </g>
 <g id="InfoGraph">
-	<rect x="663.231" y="379.368" fill="#1D2121" width="266.879" height="19.127"/>
+	<rect x="404.354" y="230.599" fill="#1D2121" width="161.521" height="11.576"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 662.7734 371.5276)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">CODE</text>
+		<text transform="matrix(1.0635 0 0 1 404.0781 225.8545)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">CODE</text>
 	</g>
-	<rect x="663.231" y="428.555" fill="#1D2121" width="266.879" height="19.127"/>
+	<rect x="404.354" y="260.368" fill="#1D2121" width="161.521" height="11.576"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 662.7734 421.1995)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">HTML</text>
+		<text transform="matrix(1.0635 0 0 1 404.0781 255.916)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">HTML</text>
 	</g>
-	<rect x="663.231" y="479.562" fill="#1D2121" width="266.879" height="16.396"/>
+	<rect x="404.354" y="291.238" fill="#1D2121" width="161.521" height="9.923"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 662.7734 470.8723)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">CSS</text>
+		<text transform="matrix(1.0635 0 0 1 404.0781 285.9795)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">CSS</text>
 	</g>
-	<rect x="663.231" y="528.747" fill="#1D2121" width="266.879" height="17.307"/>
+	<rect x="404.354" y="321.006" fill="#1D2121" width="161.521" height="10.475"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 662.7734 520.5471)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">PHP</text>
+		<text transform="matrix(1.0635 0 0 1 404.0781 316.043)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">PHP</text>
 	</g>
-	<rect x="663.231" y="577.933" fill="#1D2121" width="266.879" height="18.218"/>
+	<rect x="404.354" y="350.773" fill="#1D2121" width="161.521" height="11.027"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 662.7734 570.22)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">JAVA</text>
+		<text transform="matrix(1.0635 0 0 1 404.0781 346.1035)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">JAVA</text>
 	</g>
-	<rect x="663.231" y="628.03" fill="#1D2121" width="266.879" height="18.217"/>
+	<rect x="404.354" y="381.094" fill="#1D2121" width="161.521" height="11.025"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 662.7734 619.8918)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">JAVASCRIPT</text>
+		<text transform="matrix(1.0635 0 0 1 404.0781 376.168)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">JAVASCRIPT</text>
 	</g>
-	<rect x="663.231" y="677.216" fill="#1D2121" width="266.879" height="18.217"/>
+	<rect x="404.354" y="410.861" fill="#1D2121" width="161.521" height="11.025"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 662.7734 669.5647)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">MYSQL</text>
+		<text transform="matrix(1.0635 0 0 1 404.0781 406.2305)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">MYSQL</text>
 	</g>
-	<rect x="988.633" y="379.368" fill="#1D2121" width="266.879" height="19.127"/>
+	<rect x="601.293" y="230.599" fill="#1D2121" width="161.52" height="11.576"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 988.1758 371.5276)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">GRAPHISME</text>
+		<text transform="matrix(1.0635 0 0 1 601.0166 225.8545)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">GRAPHISME</text>
 	</g>
-	<rect x="988.633" y="428.555" fill="#1D2121" width="266.879" height="19.127"/>
+	<rect x="601.293" y="260.368" fill="#1D2121" width="161.52" height="11.576"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 988.1758 421.1995)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">PHOTOSHOP</text>
+		<text transform="matrix(1.0635 0 0 1 601.0166 255.916)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">PHOTOSHOP</text>
 	</g>
-	<rect x="988.633" y="479.562" fill="#1D2121" width="266.879" height="16.396"/>
+	<rect x="601.293" y="291.238" fill="#1D2121" width="161.52" height="9.923"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 988.1758 470.8723)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">ILLUSTRATOR</text>
+		<text transform="matrix(1.0635 0 0 1 601.0166 285.9795)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">ILLUSTRATOR</text>
 	</g>
-	<rect x="988.633" y="528.747" fill="#1D2121" width="266.879" height="17.307"/>
+	<rect x="601.293" y="321.006" fill="#1D2121" width="161.52" height="10.475"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 988.1758 520.5471)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">INDESIGNE</text>
+		<text transform="matrix(1.0635 0 0 1 601.0166 316.043)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">INDESIGNE</text>
 	</g>
-	<rect x="988.633" y="577.933" fill="#1D2121" width="266.879" height="18.218"/>
+	<rect x="601.293" y="350.773" fill="#1D2121" width="161.52" height="11.027"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 988.1758 570.22)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">PREMIER PRO</text>
+		<text transform="matrix(1.0635 0 0 1 601.0166 346.1035)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">PREMIER PRO</text>
 	</g>
-	<rect x="988.633" y="628.03" fill="#1D2121" width="266.879" height="18.217"/>
+	<rect x="601.293" y="381.094" fill="#1D2121" width="161.52" height="11.025"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 988.1758 619.8918)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">AFTER EFFECT</text>
+		<text transform="matrix(1.0635 0 0 1 601.0166 376.168)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">AFTER EFFECT</text>
 	</g>
-	<rect x="988.633" y="677.216" fill="#1D2121" width="266.879" height="18.217"/>
+	<rect x="601.293" y="410.861" fill="#1D2121" width="161.52" height="11.025"/>
 	<g>
-		<text transform="matrix(1.0635 0 0 1 988.1758 669.5647)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="15.3076">FLASH BUILDER</text>
+		<text transform="matrix(1.0635 0 0 1 601.0166 406.2305)" fill="#475656" font-family="'MyriadPro-Regular'" font-size="9.2644">FLASH BUILDER</text>
 	</g>
-</g>
-<g id="Contenu" display="none">
-	<g id="Profile" display="inline">
-		<g>
-			<g>
-				<defs>
-					<rect id="SVGID_3_" x="49.2" y="408.453" width="181.019" height="253.427"/>
-				</defs>
-				<clipPath id="SVGID_4_">
-					<use xlink:href="#SVGID_3_"  overflow="visible"/>
-				</clipPath>
-				<g transform="matrix(1 0 0 1 0 -3.051758e-005)" clip-path="url(#SVGID_4_)">
-					
-						<image overflow="visible" enable-background="new    " width="320" height="780" xlink:href="6175960C.png"  transform="matrix(0.5185 0 0 0.5185 72.3706 418.803)">
-					</image>
-				</g>
-			</g>
-		</g>
-	</g>
-	<rect x="862.395" y="690.658" display="inline" fill="#475656" width="168.023" height="18.566"/>
-	<rect x="554.198" y="387.103" display="inline" fill="#475656" width="168.023" height="19.495"/>
-	<rect x="554.198" y="437.232" display="inline" fill="#475656" width="155.955" height="19.494"/>
-	<rect x="554.198" y="489.217" display="inline" fill="#475656" width="144.815" height="16.709"/>
-	<rect x="554.198" y="539.345" display="inline" fill="#475656" width="51.057" height="17.638"/>
-	<rect x="554.198" y="589.474" display="inline" fill="#475656" width="24.607" height="18.565"/>
-	<rect x="554.198" y="640.531" display="inline" fill="#475656" width="49.67" height="18.565"/>
-	<rect x="554.198" y="690.658" display="inline" fill="#475656" width="147.137" height="18.566"/>
-	<rect x="862.395" y="387.103" display="inline" fill="#475656" width="237.646" height="19.495"/>
-	<rect x="862.395" y="437.232" display="inline" fill="#475656" width="218.151" height="19.494"/>
-	<rect x="862.395" y="489.217" display="inline" fill="#475656" width="237.646" height="16.709"/>
-	<rect x="862.395" y="539.345" display="inline" fill="#475656" width="87.261" height="17.638"/>
-	<rect x="862.395" y="589.474" display="inline" fill="#475656" width="188.445" height="18.565"/>
-	<rect x="862.395" y="640.531" display="inline" fill="#475656" width="190.303" height="18.565"/>
-	
-		<text transform="matrix(1 0 0 1 231.2407 112.9426)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 369.6104 112.9426)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 507.9805 112.9426)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 646.3506 112.9426)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 784.7207 112.9426)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 923.0898 112.9426)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 1061.46 112.9426)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 92.8711 252.3948)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 231.2407 252.3948)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 369.6104 252.3948)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 507.9805 252.3948)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 646.3506 252.3948)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 784.7207 252.3948)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 923.0898 252.3948)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	
-		<text transform="matrix(1 0 0 1 1061.46 252.3948)" display="inline" fill="#4C4C4C" font-family="'MyriadPro-Regular'" font-size="71.3471">?</text>
-	<g display="inline">
-		<g>
-			<rect id="SVGID_1_" x="45.951" y="30.17" fill="#E2E2E2" width="122.536" height="122.536"/>
-		</g>
-		<g>
-			<defs>
-				<rect id="SVGID_5_" x="45.951" y="30.17" width="122.536" height="122.536"/>
-			</defs>
-			<clipPath id="SVGID_6_">
-				<use xlink:href="#SVGID_5_"  overflow="visible"/>
-			</clipPath>
-			<g clip-path="url(#SVGID_6_)">
-				
-					<image overflow="visible" enable-background="new    " width="320" height="780" xlink:href="61759614.png"  transform="matrix(0.4778 0 0 0.4778 47.3057 34.5442)">
-				</image>
-			</g>
-		</g>
-		<g>
-			
-				<rect id="SVGID_2_" x="45.951" y="30.17" fill="none" stroke="#4C4C4C" stroke-miterlimit="10" width="122.536" height="122.536"/>
-		</g>
-	</g>
-	
-		<text transform="matrix(0.909 0 0 1 69.4722 691.6545)" display="inline" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="28.2414">GUILLAUME</text>
 </g>
 </svg>
