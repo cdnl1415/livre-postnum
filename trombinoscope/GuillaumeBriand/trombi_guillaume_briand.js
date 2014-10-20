@@ -19,7 +19,7 @@
 	    }		
 	    
 		// fonction pour ajouter un écouteur à UN ÉLÉMENT
-		//merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
+		// merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
 		function ajoutelesevenementauxelements() { 
 		     var el = document.getElementById("rect12259"); 
 		     el.addEventListener("click", afficheDetailEtu, false); 
