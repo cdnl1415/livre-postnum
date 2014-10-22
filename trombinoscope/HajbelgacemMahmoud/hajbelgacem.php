@@ -5,3 +5,4 @@ foreach ($xml->channel->item as $tof) {
 	echo "<img src='".$tof->enclosure["url"]."' />";
 	echo $tof->title;
 }
+?>
