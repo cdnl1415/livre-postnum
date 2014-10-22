@@ -53,7 +53,7 @@ class TrombinoscopeController extends Zend_Controller_Action
 	public function aimanguemouriAction(){
     
     }
-	public function cherfaouiAction(){
+	public function cherfaouiwafaeAction(){
     
     }
     public function joursoffAction(){
