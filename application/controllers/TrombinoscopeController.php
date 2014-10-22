@@ -20,6 +20,9 @@ class TrombinoscopeController extends Zend_Controller_Action
     
     public function masseixkevinAction(){
     }
+	 public function abbounisrine(){
+    
+	}
 	
 	public function hajbelgacemAction(){
     }
