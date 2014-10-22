@@ -16,7 +16,7 @@ $(document).ready(function(){
 if(nJour < 1 || nJour > 3){  
     
     //$(".container" ).load( "jours_off.html" ); 
-    document.location.replace('livre-postnum/public/trombinoscope/jours_off/');
+    document.location.replace('jours_off/');
 } 
 
 
