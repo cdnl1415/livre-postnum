@@ -47,6 +47,8 @@ class TrombinoscopeController extends Zend_Controller_Action
 	public function aimanguemouriAction(){
     
     }
+    public function jours_offAction(){
     
+    }
 }
 
