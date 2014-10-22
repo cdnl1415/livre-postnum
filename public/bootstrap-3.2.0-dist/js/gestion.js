@@ -16,7 +16,7 @@ $(document).ready(function(){
 if(nJour < 1 || nJour > 3){  
     
     //$(".container" ).load( "jours_off.html" ); 
-    document.location.replace('/public/absence/jours_off.phtml');
+    document.location.replace('joursoff/');
 } 
 
 

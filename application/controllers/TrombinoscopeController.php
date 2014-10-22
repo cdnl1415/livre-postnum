@@ -20,6 +20,9 @@ class TrombinoscopeController extends Zend_Controller_Action
     
     public function masseixkevinAction(){
     }
+	
+	public function hajbelgacemAction(){
+    }
     
     public function achraflansariAction(){
         
@@ -47,9 +50,14 @@ class TrombinoscopeController extends Zend_Controller_Action
 	public function aimanguemouriAction(){
     
     }
+<<<<<<< HEAD
 	public function cherfaouiAction(){
     
     }
+=======
+    public function joursoffAction(){
+>>>>>>> 80bbfa991f79e95f2abd62d531816b548fe25a60
     
+    }
 }
 
