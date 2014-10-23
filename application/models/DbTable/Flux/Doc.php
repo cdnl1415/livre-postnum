@@ -87,7 +87,7 @@ class Model_DbTable_Flux_Doc extends Zend_Db_Table_Abstract
     	}
     	if($rs)
     		return $this->findBydoc_id($id);
-	    else
+	else
 	    	return $id;
     	
     }     
