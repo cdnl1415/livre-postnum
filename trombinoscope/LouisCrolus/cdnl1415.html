@@ -26,7 +26,8 @@
 	    function IHMcharge(error, xml){
 	    	//Adding our svg file to HTML document
 			var importedNode = document.importNode(xml.documentElement, true);
-    	  	d3.select("#viz").node().appendChild(importedNode);	    	    	  	
+    	  	d3.select("#viz").node().appendChild(importedNode);	 
+    	  	ajoutelesevenementauxelements();	  	
 	    }		
 	    
 		// fonction pour ajouter un écouteur à UN ÉLÉMENT
@@ -49,8 +50,12 @@
 		}
 		
 		function afficheDetailEtu(){
-			alert("OK");
-			//var elemEtu = document.getElementById('g16893');
+			//alert("OK");
+
+			var elemIma = document.getElementById('Calque_2');
+			//mettre à jour l'image
+			elemIma.setAttribute("fill","#555555");
+
 		}
 
 		</script>
