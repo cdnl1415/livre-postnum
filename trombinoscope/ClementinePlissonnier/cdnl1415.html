@@ -9,7 +9,8 @@
 		var ficSVG = "../../svg/InterfaceClementine.svg";
 		
 		//var arrIds = ["image16", "image18", "image20", "image22", "image24", "image26", "image28", "image30", "image32", "image34", "image36", "image38", "image40", "image42", "image44"];
-		var arrIds = ["Yo", "Alex", "Antoine"];
+		var arrIds = [{"idClick":"Yo","urlTof":"http://localhost/livre-postnum/data/trombi/CDNL1415/8.jpg","nom":"Yolaine Raymond","comp":"pas mal"}
+		,{"idClick":"Alex","urlTof":"http://localhost/livre-postnum/data/trombi/CDNL1415/6.jpg","nom":"Alex Pain","comp":"pas mal aussi"}];
 		
 		function load(){
 		 	//charge l'IHM SVG
@@ -32,8 +33,8 @@
 		
 			for (i = 0; i < arrIds.length; i++) {
 				//length = taille du tableau
-			     var el = document.getElementById(arrIds[i]); 
-			     el.addEventListener("click", afficheDetailEtu, false); 
+			     var el = document.getElementById(arrIds[i].idClick); 
+			     el.addEventListener("click", afficheDetailEtu(), false); 
 			} 		
 		}
 		/*
@@ -52,12 +53,12 @@
 			//récupère la balise image grand format
 			var elemIma = document.getElementById('image14');
 			//mettre à jour l'image
-			elemIma.setAttribute("xlink:href","http://localhost/livre-postnum/data/trombi/CDNL1415/10.jpg");
+			elemIma.setAttribute("xlink:href",arrIds[0].urlTof);
 			//change les textes
 			var elemTxt = document.getElementById('text37');
-			elemTxt.textContent='Sam Szo';
+			elemTxt.textContent=arrIds[0].nom;
 			elemTxt = document.getElementById('text39');
-			elemTxt.textContent='Il est trop fort !';
+			elemTxt.textContent=arrIds[0].comp;
 		}
 
 		</script>
