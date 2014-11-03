@@ -6,9 +6,10 @@
 	    <script type="text/javascript" src="../../public/js/queue.v1.min.js" ></script>
 		<script type="text/javascript">
 
-		var ficSVG = "../../svg/trombinoscopequentinqb.svg";
+		var ficSVG = "../../svg/InterfaceClementine.svg";
 		
-		var arrIds = ["image16", "image18", "image20", "image22", "image24", "image26", "image28", "image30", "image32", "image34", "image36", "image38", "image40", "image42", "image44"];
+		//var arrIds = ["image16", "image18", "image20", "image22", "image24", "image26", "image28", "image30", "image32", "image34", "image36", "image38", "image40", "image42", "image44"];
+		var arrIds = ["Yo", "Alex", "Antoine"];
 		
 		function load(){
 		 	//charge l'IHM SVG
@@ -48,8 +49,10 @@
 		}
 		
 		function afficheDetailEtu(){
-			alert("OK");
-			//var elemEtu = document.getElementById('g16893');
+			//récupère la balise image grand format
+			var elemIma = document.getElementById('image14');
+			//mettre à jour l'image
+			elemIma.setAttribute("xlink:href","http://localhost/livre-postnum/data/trombi/CDNL1415/10.jpg");
 			
 		}
 
