@@ -68,15 +68,20 @@
 		}
 		
 		function afficheDetailEtu(){
+		
+			for (i=0; i <= arrIds.length; i++){
+		
 			//change les textes
+		
+			var elemTxt = document.getElementById('prenom');
+			elemTxt.textContent=arrIds[i].prenom;
 			
-			var elemTxt = document.getElementById('prenom', 'nom', 'profil');
-			// alexandre
-			elemTxt.textContent=arrIds[0].prenom;
 			elemTxt = document.getElementById('nom');
-			elemTxt.textContent=arrIds[0].nom;
+			elemTxt.textContent=arrIds[i].nom;
+			
 			elemTxt = document.getElementById('profil');
-			elemTxt.textContent=arrIds[0].profil;
+			elemTxt.textContent=arrIds[i].profil;
+			}
 		}
 
 		</script>
