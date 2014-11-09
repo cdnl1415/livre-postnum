@@ -7,9 +7,23 @@
 		
 		<script type="text/javascript">
 
-		var ficSVG = "../../svg/trombinoscope_helene-donato.svg";
+		var ficSVG = "../../svg/heleneDONATO.svg";
 		
-		var arrIds = ["XMLID_2_", "Alexandre", "Yolaine", "Hugo", "Clémentine", "Guillaume", "Gabriela", "Marc", "Quentin", "Alexia", "Hélène", "Macaire", "Louis", "Antoine", "Simon"];
+		var arrIds = [{"idClick":"alexandre", "nom":"Pain", "prenom":"Alexandre", "profil":"Programmeur"},
+		{"idClick":"alexia", "nom":"Camail", "prenom":"Alexia", "profil":"Graphiste"},
+		{"idClick":"antoine", "nom":"Barres", "prenom":"Antoine", "profil":"Graphiste"},
+		{"idClick":"gabriela", "nom":"Paredes", "prenom":"Gabriela", "profil":"Graphiste"},
+		{"idClick":"louis", "nom":"Crolus", "prenom":"Louis", "profil":"Programmeur"},
+		{"idClick":"amin", "nom":"Ghazi", "prenom":"Amin", "profil":"Programmeur"},
+		{"idClick":"clementine", "nom":"Plissonnier", "prenom":"Clémentine", "profil":"Graphiste"},
+		{"idClick":"guillaume", "nom":"", "prenom":"Guillaume", "profil":"Graphiste"},
+		{"idClick":"macaire", "nom":"Del Monaco", "prenom":"Macaire", "profil":"Programmeur"},
+		{"idClick":"helene", "nom":"Donato", "prenom":"Hélène", "profil":"Graphiste"},
+		{"idClick":"hugo", "nom":"Stephan", "prenom":"Hugo", "profil":"Programmeur"},
+		{"idClick":"marc", "nom":"Biofa", "prenom":"Marc", "profil":"Programmeur"},
+		{"idClick":"quentin", "nom":"Brunet", "prenom":"Quentin", "profil":"Graphiste"},
+		{"idClick":"simon", "nom":"Tschan", "prenom":"Simon", "profil":"Graphiste"},
+		{"idClick":"yolaine", "nom":"Raymond", "prenom":"Yolaine", "profil":"Graphiste"}];
 		
 		function load(){
 		 	//charge l'IHM SVG
@@ -37,7 +51,7 @@
 		
 			for (i = 0; i < arrIds.length; i++) {
 			//length = taille du tableau
-			     var el = document.getElementById(arrIds[i]); 
+			     var el = document.getElementById(arrIds[i].idClick); 
 			     el.addEventListener("click", afficheDetailEtu, false); 
 			} 		
 		}
@@ -54,14 +68,19 @@
 		}
 		
 		function afficheDetailEtu(){
-			alert("OK");
-			//var elemEtu = document.getElementById('g16893');
+			//change les textes
+			var elemTxt = document.getElementById('prenom');
+			elemTxt.textContent=arrIds[0].prenom;
+			elemTxt = document.getElementById('nom');
+			elemTxt.textContent=arrIds[0].nom;
+			elemTxt = document.getElementById('profil');
+			elemTxt.textContent=arrIds[0].profil;
 			
 		}
 
 		</script>
 	</head>
-	<body onLoad="load();" bgcolor="#fff">
+	<body onLoad="load();" bgcolor="#BE1E2D">
 		<div id="viz" ></div>
 	</body>
 </html>
