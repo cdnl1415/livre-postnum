@@ -69,21 +69,18 @@
 		
 		function afficheDetailEtu(){
 		
-			for (i=0; i <= arrIds.length; i++){
-				if (i==arrIds[i]){
-		
 			//change les textes
 		
 			var elemTxt = document.getElementById('prenom');
-			elemTxt.textContent=arrIds[i].prenom;
+			elemTxt.textContent=arrIds[0].prenom;
 			
 			elemTxt = document.getElementById('nom');
-			elemTxt.textContent=arrIds[i].nom;
+			elemTxt.textContent=arrIds[0].nom;
 			
 			elemTxt = document.getElementById('profil');
-			elemTxt.textContent=arrIds[i].profil;
-			}
-			}
+			elemTxt.textContent=arrIds[0].profil;
+			
+			
 		}
 
 		</script>
