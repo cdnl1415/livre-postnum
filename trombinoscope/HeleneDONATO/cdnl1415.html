@@ -47,7 +47,7 @@
 	    
 		// fonction pour ajouter un écouteur à UN ÉLÉMENT
 		//merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
-		function ajoutelesevenementauxelements() { 
+		function ajoutelesevenementauxelements(i) { 
 		
 			for (i = 0; i < arrIds.length; i++) {
 			//length = taille du tableau
@@ -68,17 +68,18 @@
 		}
 		
 		function afficheDetailEtu(){
-		
+			
 			//change les textes
 		
 			var elemTxt = document.getElementById('prenom');
-			elemTxt.textContent=arrIds[0].prenom;
+			elemTxt.textContent=arrIds[i].prenom;
 			
 			elemTxt = document.getElementById('nom');
-			elemTxt.textContent=arrIds[0].nom;
+			elemTxt.textContent=arrIds[i].nom;
 			
 			elemTxt = document.getElementById('profil');
-			elemTxt.textContent=arrIds[0].profil;
+			elemTxt.textContent=arrIds[i].profil;
+			
 			
 			
 		}
