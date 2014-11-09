@@ -52,7 +52,7 @@
 			for (i = 0; i < arrIds.length; i++) {
 			//length = taille du tableau
 			     var el = document.getElementById(arrIds[i].idClick); 
-			     el.addEventListener("click", afficheDetailEtu, false); 
+			     el.addEventListener("click", afficheDetailEtu); 
 			} 		
 		}
 		/*
@@ -69,13 +69,14 @@
 		
 		function afficheDetailEtu(){
 			//change les textes
-			var elemTxt = document.getElementById('prenom');
+			
+			var elemTxt = document.getElementById('prenom', 'nom', 'profil');
+			// alexandre
 			elemTxt.textContent=arrIds[0].prenom;
 			elemTxt = document.getElementById('nom');
 			elemTxt.textContent=arrIds[0].nom;
 			elemTxt = document.getElementById('profil');
 			elemTxt.textContent=arrIds[0].profil;
-			
 		}
 
 		</script>
