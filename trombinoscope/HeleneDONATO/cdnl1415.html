@@ -70,6 +70,7 @@
 		function afficheDetailEtu(){
 		
 			for (i=0; i <= arrIds.length; i++){
+				if (i==arrIds[i]){
 		
 			//change les textes
 		
@@ -81,6 +82,7 @@
 			
 			elemTxt = document.getElementById('profil');
 			elemTxt.textContent=arrIds[i].profil;
+			}
 			}
 		}
 
