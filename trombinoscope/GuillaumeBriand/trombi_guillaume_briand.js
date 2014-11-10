@@ -1,5 +1,8 @@
 		var ficSVG = "../../svg/trombi_guillaume_briand.svg";
 		
+		
+		
+	
 		function load(){
 		 	//charge l'IHM SVG
 		 	chargeIHM();
