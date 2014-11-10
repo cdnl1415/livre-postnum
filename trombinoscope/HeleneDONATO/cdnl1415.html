@@ -68,14 +68,14 @@
 		}
 		
 		function afficheDetailEtu(i){
-			for (var i = 0; i <= arrIds.length; i ++){
-				if (i<=0){
+			for (var i = 0; i < arrIds.length; i ++){
+				if (0 <= i <= arrIds.length){
 			//change les textes		
-			var elemTxt = document.getElementById('prenom');
-			elemTxt.textContent=arrIds[i].prenom;
-			
 			elemTxt = document.getElementById('nom');
 			elemTxt.textContent=arrIds[i].nom;
+			
+			var elemTxt = document.getElementById('prenom');
+			elemTxt.textContent=arrIds[i].prenom;
 			
 			elemTxt = document.getElementById('profil');
 			elemTxt.textContent=arrIds[i].profil;
