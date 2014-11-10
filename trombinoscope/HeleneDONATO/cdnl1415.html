@@ -67,10 +67,10 @@
 				divInfo.style.display = 'none';
 		}
 		
-		function afficheDetailEtu(){
-			
-			//change les textes
-		
+		function afficheDetailEtu(i){
+			for (var i = 0; i <= arrIds.length; i ++){
+				if (i<=0){
+			//change les textes		
 			var elemTxt = document.getElementById('prenom');
 			elemTxt.textContent=arrIds[i].prenom;
 			
@@ -79,7 +79,8 @@
 			
 			elemTxt = document.getElementById('profil');
 			elemTxt.textContent=arrIds[i].profil;
-			
+			}
+			}
 			
 			
 		}
