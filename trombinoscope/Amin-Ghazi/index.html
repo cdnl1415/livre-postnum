@@ -11,6 +11,8 @@
 		
 		var arrIds = ["photo-1", "photo-2", "photo-3", "photo-4", "photo-5", "photo-6", "photo-7", "photo-8", "photo-9", "photo-10", "photo-11", "photo-12", "photo-13", "photo-14", "photo-15"];
 		
+		var rectFond;
+		
 		function load(){
 		 	//charge l'IHM SVG
 		 	chargeIHM();
@@ -29,6 +31,8 @@
 			var importedNode = document.importNode(xml.documentElement, true);
     	  		d3.select("#viz").node().appendChild(importedNode);	    	    	  	
     	  		ajoutelesevenementauxelements();
+    	  		var g = document.getElementById("arrier-plan");
+    	  		rectFond = g.childNodes[1];
 	    }		
 	    
 		// fonction pour ajouter un écouteur à UN ÉLÉMENT
@@ -59,8 +63,8 @@
 		function afficheDetailEtu(){
 			var couleur = document.getElementById("object-arrier-plan");
 			
-			
 			couleur.setAttribute("fill", "#D31624");
+			rectFond.setAttribute("fill", "red");
 			alert("OK");
 			//var elemEtu = document.getElementById('g16893');
 			
