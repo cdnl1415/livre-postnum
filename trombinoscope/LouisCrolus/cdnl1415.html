@@ -33,7 +33,7 @@
 		// fonction pour ajouter un écouteur à UN ÉLÉMENT
 		//merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
 		function ajoutelesevenementauxelements() { 
-		     var el = document.getElementById("Calque_1"); 
+		     var el = document.getElementById("photo-1"); 
 		     el.addEventListener("click", afficheDetailEtu, false); 
 		   } 		
 		
@@ -52,25 +52,9 @@
 		function afficheDetailEtu(){
 			//alert("OK");
 
-			var elemIma = document.getElementById('Calque_2');
+			var elemIma = document.getElementById('cadre');
 			var elemIma2 = document.getElementById('Calque_5');
-			elemIma2.setAttribute("fill","#ffffff");
-
-			//merci à https://developer.mozilla.org/fr/docs/DOM/element.childNodes
-			if (elemIma.hasChildNodes())
-				// On vérifie d'abord si l'objet n'est pas vide, c.-à-d. s'il a des enfants
-				{
-				  var collEnfants = elemIma.childNodes;
-				  for (var i = 0; i < collEnfants.length; i++) 
-				  {
-					   // faire quelque chose avec chaque enfant en tant que collEnfants[i]
-					   // NOTE : la liste n'est pas une copie, l'ajout ou le retrait 
-					   // d'éléments modifiera la liste
-					   if(collEnfants[i].nodeName=="rect")
-						   collEnfants[i].setAttribute("fill","#751299");
-				  }
-				  
-				}
+			elemIma.setAttribute("fill","#ffffff");
 			
 		}
 
