@@ -8,15 +8,25 @@
 		<script type="text/javascript">
 
 		var ficSVG = "../../svg/trombi_Amin_Ghazi.svg";
+		var ficCSV = "../../data/ProfilsCDNL1415.csv";
 		
 		var arrIds = ["photo-1", "photo-2", "photo-3", "photo-4", "photo-5", "photo-6", "photo-7", "photo-8", "photo-9", "photo-10", "photo-11", "photo-12", "photo-13", "photo-14", "photo-15"];
 		
 		var rectFond;
+		var dataProfil;
 		
 		function load(){
 		 	//charge l'IHM SVG
+		 	chargeData(ficCSV);
 		 	chargeIHM();
 
+		}
+		
+		function chargeData(url){
+			d3.csv(url, function(error, data) {
+
+				dataProfil = data;
+			});
 		}
 
 		//charge le svg
