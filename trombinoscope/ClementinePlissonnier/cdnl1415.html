@@ -7,11 +7,14 @@
 		<script type="text/javascript">
 
 		var ficSVG = "../../svg/InterfaceClementine.svg";
+		var ficCSV = "../../data/ProfilsCDNL1415.csv";
+		var dataProfil;
 		
 		//var arrIds = ["image16", "image18", "image20", "image22", "image24", "image26", "image28", "image30", "image32", "image34", "image36", "image38", "image40", "image42", "image44"];
 		var arrIds = [
-		     {"idClick":"Yo","urlTof":"http://localhost/livre-postnum/data/trombi/CDNL1415/8.jpg","nom":"Yolaine Raymond","comp":"pas mal"}
-			,{"idClick":"Alex","urlTof":"http://localhost/livre-postnum/data/trombi/CDNL1415/6.jpg","nom":"Alex Pain","comp":"pas mal aussi"}
+		     {"idCSV":9,"idClick":"Yo","urlTof":"http://localhost/livre-postnum/data/trombi/CDNL1415/8.jpg","nom":"Yolaine Raymond","comp":"pas mal"}
+			,{"idCSV":12,"idClick":"Alex","urlTof":"http://localhost/livre-postnum/data/trombi/CDNL1415/6.jpg","nom":"Alex Pain","comp":"pas mal aussi"}
+			,{"idCSV":1,"idClick":"Hugo","urlTof":"http://localhost/livre-postnum/data/trombi/CDNL1415/2.jpg","nom":"Hugo Stéphan","comp":"il confond son nom avec son mail..."}
 			];
 		
 		function load(){
@@ -20,8 +23,22 @@
 		    	queue()
 		    		.defer(d3.xml, ficSVG, "image/svg+xml")
 		    		.await(IHMcharge);
+		    	chargeData(ficCSV);
 		}
 
+		function chargeData(url){
+			d3.csv(url, function(error, data) {
+
+				dataProfil = data;
+				//affiche les données dans la console
+				// Compute the distinct nodes from the links.
+				dataProfil.forEach(function(d, i) {
+				    console.log(i+" : "+d.nom);
+				});				
+				
+			});
+		}
+		
 	    function IHMcharge(error, xml){
 	    	//Adding our svg file to HTML document
 			var importedNode = document.importNode(xml.documentElement, true);
@@ -58,13 +75,15 @@
 			var elemIma = document.getElementById('image14');
 			//récupère les information de l'étudiant
 			var item = getElementArr(arrIds, "idClick", evt.currentTarget.id);
+			//Récupérer les données du csv
+			var itemCSV = dataProfil[item.idCSV];
 			//mettre à jour l'image
 			elemIma.setAttribute("xlink:href",item.urlTof);
 			//change les textes
 			var elemTxt = document.getElementById('text37');
-			elemTxt.textContent=item.nom;
+			elemTxt.textContent=itemCSV["Prénom"]+" "+itemCSV["nom"];
 			elemTxt = document.getElementById('text39');
-			elemTxt.textContent=item.comp;
+			elemTxt.textContent=itemCSV["Envies"];
 		}
 
 		function getElementArr(arr, prop, val){
