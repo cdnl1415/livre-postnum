@@ -53,6 +53,9 @@
 			//alert("OK");
 
 			var elemIma = document.getElementById('Calque_2');
+			var elemIma2 = document.getElementById('Calque_5');
+			elemIma2.setAttribute("fill","#ffffff");
+
 			//merci à https://developer.mozilla.org/fr/docs/DOM/element.childNodes
 			if (elemIma.hasChildNodes())
 				// On vérifie d'abord si l'objet n'est pas vide, c.-à-d. s'il a des enfants
@@ -64,10 +67,14 @@
 					   // NOTE : la liste n'est pas une copie, l'ajout ou le retrait 
 					   // d'éléments modifiera la liste
 					   if(collEnfants[i].nodeName=="rect")
-						   collEnfants[i].setAttribute("fill","#555555");
+						   collEnfants[i].setAttribute("fill","#751299");
 				  }
-				}			
+				  
+				}
+			
 		}
+
+		
 
 		</script>
 	</head>
