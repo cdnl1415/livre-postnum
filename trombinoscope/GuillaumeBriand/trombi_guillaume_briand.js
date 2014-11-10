@@ -9,7 +9,7 @@
 		}
 
 		//charge le svg
-	    //merci à http://bl.ocks.org/KoGor/8162640
+	    //merci ï¿½ http://bl.ocks.org/KoGor/8162640
 	    function chargeIHM(){
 	    	queue()
 	    		.defer(d3.xml, ficSVG, "image/svg+xml")
@@ -18,18 +18,25 @@
 	    function IHMcharge(error, xml){
 	    	//Adding our svg file to HTML document
 			var importedNode = document.importNode(xml.documentElement, true);
-    	  	d3.select("#viz").node().appendChild(importedNode);	    	    	  	
+			d3.select("#viz").node().appendChild(importedNode);	    	    	  	
+			//correction du lien vers les images
+			var arrImg = document.getElementsByTagName("image");
+			for (var i = 0; i < arrImg.length; i++) {
+			    var path = arrImg[i].getAttribute("xlink:href");
+			    path = path.replace("../trombinoscope/GuillaumeBriand/", "");
+			    arrImg[i].setAttribute("xlink:href",path);
+			}
 	    }		
 	    
-		// fonction pour ajouter un écouteur à UN ÉLÉMENT
-		// merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
+		// fonction pour ajouter un ï¿½couteur ï¿½ UN ï¿½Lï¿½MENT
+		// merci ï¿½ https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
 		function ajoutelesevenementauxelements() { 
 		     var el = document.getElementById("rect12259"); 
 		     el.addEventListener("click", afficheDetailEtu, false); 
 		   } 		
 		
 		/*
-		 merci à http://www.commentcamarche.net/forum/affich-21135416-html-afficher-cacher-une-div-sur-clique-a
+		 merci ï¿½ http://www.commentcamarche.net/forum/affich-21135416-html-afficher-cacher-une-div-sur-clique-a
 		 */
 		function switchInfoPerso()
 		{
