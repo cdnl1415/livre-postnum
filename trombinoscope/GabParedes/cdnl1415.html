@@ -5,10 +5,11 @@
 	    <script type="text/javascript" src="../../public/js/d3.js"></script>
 	    <script type="text/javascript" src="../../public/js/queue.v1.min.js" ></script>
 		<script type="text/javascript">
-
-		var ficSVG = "../../svg/Interface_GabPar.svg";
+		var ficSVG = "../../svg/InterfaceClementine.svg";
 		
-		var arrIds = ["image16", "image18", "image20", "image22", "image24", "image26", "image28", "image30", "image32", "image34", "image36", "image38", "image40", "image42", "image44"];
+		//var arrIds = ["image16", "image18", "image20", "image22", "image24", "image26", "image28", "image30", "image32", "image34", "image36", "image38", "image40", "image42", "image44"];
+		var arrIds = [{"idClick":"Yo","urlTof":"http://localhost/livre-postnum/data/trombi/CDNL1415/8.jpg","nom":"Yolaine Raymond","comp":"pas mal"}
+		,{"idClick":"Alex","urlTof":"http://localhost/livre-postnum/data/trombi/CDNL1415/6.jpg","nom":"Alex Pain","comp":"pas mal aussi"}];
 		
 		function load(){
 		 	//charge l'IHM SVG
@@ -17,7 +18,6 @@
 		    		.defer(d3.xml, ficSVG, "image/svg+xml")
 		    		.await(IHMcharge);
 		}
-
 	    function IHMcharge(error, xml){
 	    	//Adding our svg file to HTML document
 			var importedNode = document.importNode(xml.documentElement, true);
@@ -29,10 +29,14 @@
 		//merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
 		function ajoutelesevenementauxelements() { 
 		
-			for (i = 0; i < arrIds.length; i++) {
+			for (var i = 0; i < arrIds.length; i++) {
 				//length = taille du tableau
-			     var el = document.getElementById(arrIds[i]); 
-			     el.addEventListener("click", afficheDetailEtu, false); 
+			     var el = document.getElementById(arrIds[i].idClick); 
+				 var arr = arrIds[i];
+			     el.addEventListener("click", function() {
+			    	 	afficheDetailEtu(arr);
+			     }); 
+			     //afficheDetailEtu
 			} 		
 		}
 		/*
@@ -47,12 +51,17 @@
 				divInfo.style.display = 'none';
 		}
 		
-		function afficheDetailEtu(){
-			alert("OK");
-			//var elemEtu = document.getElementById('g16893');
-			
+		function afficheDetailEtu(arr, id){
+			//récupère la balise image grand format
+			var elemIma = document.getElementById('image14');
+			//mettre à jour l'image
+			elemIma.setAttribute("xlink:href",arrIds[i].urlTof);
+			//change les textes
+			var elemTxt = document.getElementById('text37');
+			elemTxt.textContent=arrIds[i].nom;
+			elemTxt = document.getElementById('text39');
+			elemTxt.textContent=arrIds[i].comp;
 		}
-
 		</script>
 	</head>
 	<body onload="load();">
