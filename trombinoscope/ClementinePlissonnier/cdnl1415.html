@@ -31,10 +31,14 @@
 		//merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
 		function ajoutelesevenementauxelements() { 
 		
-			for (i = 0; i < arrIds.length; i++) {
+			for (var i = 0; i < arrIds.length; i++) {
 				//length = taille du tableau
 			     var el = document.getElementById(arrIds[i].idClick); 
-			     el.addEventListener("click", afficheDetailEtu(), false); 
+				 var arr = arrIds[i];
+			     el.addEventListener("click", function() {
+			    	 	afficheDetailEtu(arr);
+			     }); 
+			     //afficheDetailEtu
 			} 		
 		}
 		/*
@@ -49,16 +53,16 @@
 				divInfo.style.display = 'none';
 		}
 		
-		function afficheDetailEtu(){
+		function afficheDetailEtu(arr, id){
 			//récupère la balise image grand format
 			var elemIma = document.getElementById('image14');
 			//mettre à jour l'image
-			elemIma.setAttribute("xlink:href",arrIds[0].urlTof);
+			elemIma.setAttribute("xlink:href",arrIds[i].urlTof);
 			//change les textes
 			var elemTxt = document.getElementById('text37');
-			elemTxt.textContent=arrIds[0].nom;
+			elemTxt.textContent=arrIds[i].nom;
 			elemTxt = document.getElementById('text39');
-			elemTxt.textContent=arrIds[0].comp;
+			elemTxt.textContent=arrIds[i].comp;
 		}
 
 		</script>
