@@ -4,20 +4,40 @@
 		<title>Trombinoscope CDNL 14-15</title>
 	    <script type="text/javascript" src="../../public/js/d3.js"></script>
 	    <script type="text/javascript" src="../../public/js/queue.v1.min.js" ></script>
+		
 		<script type="text/javascript">
 
 		var ficSVG = "../../svg/heleneDONATO.svg";
 		
-		var arrIds = ["alexandre", "alexia", "amin", "antoine", "clementine", "gabriela", "guillaume", "helene", "hugo", "louis", "macaire", "marc", "quentin", "simon", "yolaine"];
+		var arrIds = [{"idClick":"alexandre", "nom":"Pain", "prenom":"Alexandre", "profil":"Programmeur"},
+		{"idClick":"alexia", "nom":"Camail", "prenom":"Alexia", "profil":"Graphiste"},
+		{"idClick":"antoine", "nom":"Barres", "prenom":"Antoine", "profil":"Graphiste"},
+		{"idClick":"gabriela", "nom":"Paredes", "prenom":"Gabriela", "profil":"Graphiste"},
+		{"idClick":"louis", "nom":"Crolus", "prenom":"Louis", "profil":"Programmeur"},
+		{"idClick":"amin", "nom":"Ghazi", "prenom":"Amin", "profil":"Programmeur"},
+		{"idClick":"clementine", "nom":"Plissonnier", "prenom":"Clémentine", "profil":"Graphiste"},
+		{"idClick":"guillaume", "nom":"", "prenom":"Guillaume", "profil":"Graphiste"},
+		{"idClick":"macaire", "nom":"Del Monaco", "prenom":"Macaire", "profil":"Programmeur"},
+		{"idClick":"helene", "nom":"Donato", "prenom":"Hélène", "profil":"Graphiste"},
+		{"idClick":"hugo", "nom":"Stephan", "prenom":"Hugo", "profil":"Programmeur"},
+		{"idClick":"marc", "nom":"Biofa", "prenom":"Marc", "profil":"Programmeur"},
+		{"idClick":"quentin", "nom":"Brunet", "prenom":"Quentin", "profil":"Graphiste"},
+		{"idClick":"simon", "nom":"Tschan", "prenom":"Simon", "profil":"Graphiste"},
+		{"idClick":"yolaine", "nom":"Raymond", "prenom":"Yolaine", "profil":"Graphiste"}];
 		
 		function load(){
 		 	//charge l'IHM SVG
-		    //merci à http://bl.ocks.org/KoGor/8162640
-		    	queue()
-		    		.defer(d3.xml, ficSVG, "image/svg+xml")
-		    		.await(IHMcharge);
+		 	chargeIHM();
+
 		}
 
+		//charge le svg
+	    //merci à http://bl.ocks.org/KoGor/8162640
+	    function chargeIHM(){
+	    	queue()
+	    		.defer(d3.xml, ficSVG, "image/svg+xml")
+	    		.await(IHMcharge);
+	    }
 	    function IHMcharge(error, xml){
 	    	//Adding our svg file to HTML document
 			var importedNode = document.importNode(xml.documentElement, true);
@@ -27,12 +47,12 @@
 	    
 		// fonction pour ajouter un écouteur à UN ÉLÉMENT
 		//merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
-		function ajoutelesevenementauxelements() { 
+		function ajoutelesevenementauxelements(i) { 
 		
 			for (i = 0; i < arrIds.length; i++) {
-				//length = taille du tableau
+			//length = taille du tableau
 			     var el = document.getElementById(arrIds[i].idClick); 
-			     el.addEventListener("click", afficheDetailEtu(), false); 
+			     el.addEventListener("click", afficheDetailEtu); 
 			} 		
 		}
 		/*
@@ -48,20 +68,27 @@
 		}
 		
 		function afficheDetailEtu(){
-			//récupère la balise image grand format
-			var elemIma = document.getElementById('alexandre');
-			//mettre à jour l'image
-			elemIma.setAttribute("xlink:href",arrIds[0].urlTof);
-			//change les textes
-			var elemTxt = document.getElementById('nom');
-			elemTxt.textContent=arrIds[0].nom;
-			elemTxt = document.getElementById('prenom');
-			elemTxt.textContent=arrIds[0].comp;
+			for (var i = 0; i < arrIds.length; i ++){
+				if (0 <= i <= arrIds.length){
+				
+			//change les textes		
+			elemTxt = document.getElementById('nom');
+			elemTxt.textContent=arrIds[i].nom;
+			
+			var elemTxt = document.getElementById('prenom');
+			elemTxt.textContent=arrIds[i].prenom;
+			
+			elemTxt = document.getElementById('profil');
+			elemTxt.textContent=arrIds[i].profil;
+			}
+			}
+			
+			
 		}
 
 		</script>
 	</head>
-	<body onload="load();">
+	<body onLoad="load();" bgcolor="#BE1E2D">
 		<div id="viz" ></div>
 	</body>
 </html>
