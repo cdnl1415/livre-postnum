@@ -1,33 +1,37 @@
 		var ficSVG = "../../svg/trombi_guillaume_briand.svg";
+		//var arrIds = ["image16", "image18", "image20", "image22", "image24", "image26", "image28", "image30", "image32", "image34", "image36", "image38", "image40", "image42", "image44"];
+		var arrIds = [
+		     {"idClick":"Yo","urlTof":"http://localhost/GitHub/livre-postnum/trombinoscope/GuillaumeBriand/CAM00033.jpg","nom":"Yolaine Raymond","comp":"pas mal"}
+			,{"idClick":"Alex","urlTof":"http://localhost/livre-postnum/data/trombi/CDNL1415/6.jpg","nom":"Alex Pain","comp":"pas mal aussi"}
+			];
 		
-		
-		
-	
 		function load(){
 		 	//charge l'IHM SVG
-		 	chargeIHM();
+		    //merci à http://bl.ocks.org/KoGor/8162640
+		    	queue()
+		    		.defer(d3.xml, ficSVG, "image/svg+xml")
+		    		.await(IHMcharge);
 		}
 
-		//charge le svg
-	    //merci à http://bl.ocks.org/KoGor/8162640
-	    function chargeIHM(){
-	    	queue()
-	    		.defer(d3.xml, ficSVG, "image/svg+xml")
-	    		.await(IHMcharge);
-	    }
 	    function IHMcharge(error, xml){
 	    	//Adding our svg file to HTML document
 			var importedNode = document.importNode(xml.documentElement, true);
-    	  	d3.select("#viz").node().appendChild(importedNode);	    	    	  	
+    	  		d3.select("#viz").node().appendChild(importedNode);	    	    	  	
+    	  		ajoutelesevenementauxelements();
 	    }		
 	    
 		// fonction pour ajouter un écouteur à UN ÉLÉMENT
-		// merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
+		//merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
 		function ajoutelesevenementauxelements() { 
-		     var el = document.getElementById("rect12259"); 
-		     el.addEventListener("click", afficheDetailEtu, false); 
-		   } 		
 		
+			for (var i = 0; i < arrIds.length; i++) {
+				//length = taille du tableau
+			     var el = document.getElementById(arrIds[i].idClick); 
+				 var j = i;
+			     el.addEventListener("click", afficheDetailEtu,false); 
+			    	
+			} 		
+		}
 		/*
 		 merci à http://www.commentcamarche.net/forum/affich-21135416-html-afficher-cacher-une-div-sur-clique-a
 		 */
@@ -40,8 +44,24 @@
 				divInfo.style.display = 'none';
 		}
 		
-		function afficheDetailEtu(){
-			alert("OK");
-			//var elemEtu = document.getElementById('g16893');
-			
+		function afficheDetailEtu(evt){
+			//récupère la balise image grand format
+			var elemIma = document.getElementById('image14');
+			//récupère les information de l'étudiant
+			var item = getElementArr(arrIds, "idClick", evt.currentTarget.id);
+			//mettre à jour l'image
+			elemIma.setAttribute("xlink:href",item.urlTof);
+			//change les textes
+			var elemTxt = document.getElementById('text37');
+			elemTxt.textContent=item.nom;
+			elemTxt = document.getElementById('text39');
+			elemTxt.textContent=item.comp;
 		}
+
+		function getElementArr(arr, prop, val){
+			for (var i = 0; i < arr.length; i++) {
+				if(arr[i][prop]==val)return arr[i];
+			}
+			return false;
+		}
+		
