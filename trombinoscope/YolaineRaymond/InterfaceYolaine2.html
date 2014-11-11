@@ -58,6 +58,7 @@
 			     el.addEventListener("click", afficheDetailEtu,false);
 			}
 		}
+		
 		/*
 		 merci à http://www.commentcamarche.net/forum/affich-21135416-html-afficher-cacher-une-div-sur-clique-a
 		 */
@@ -71,18 +72,14 @@
 		}
 		
 		function afficheDetailEtu(evt){
-			//récupère la balise image grand format
-			var elemIma = document.getElementById('image14');
 			//récupère les information de l'étudiant
 			var item = getElementArr(arrIds, "idClick", evt.currentTarget.id);
 			//Récupérer les données du csv
 			var itemCSV = dataProfil[item.idCSV];
-			//mettre à jour l'image
-			elemIma.setAttribute("xlink:href",item.urlTof);
 			//change les textes
-			var elemTxt = document.getElementById('text37');
+			var elemTxt = document.getElementById('Prenom');
 			elemTxt.textContent=itemCSV["Prénom"]+" "+itemCSV["nom"];
-			elemTxt = document.getElementById('text39');
+			elemTxt = document.getElementById('Competences');
 			elemTxt.textContent=itemCSV["Envies"];
 		}
 		
