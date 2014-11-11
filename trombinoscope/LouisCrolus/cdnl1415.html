@@ -7,22 +7,45 @@
 		<script type="text/javascript">
 
 		var ficSVG = "../../svg/CrolusLouisTrombi.svg";
+		var ficCSV = "../../data/ProfilsCDNL1415.csv";
 
+
+		var arrIds = [
+			{"idCSV":5,"idClick":"Photo3","urlTof":"http://127.0.0.1/exos/livre-postnum/data/trombi/CDNL1415/14.jpg","nom":"Guillaume","comp":"pas mal"},
+		     {"idCSV":14,"idClick":"Photo1","urlTof":"http://127.0.0.1/exos/livre-postnum/data/trombi/CDNL1415/17.jpg","nom":"Marc","comp":"pas mal"}
+			,{"idCSV":1,"idClick":"Photo15","urlTof":"http://127.0.0.1/exos/livre-postnum/data/trombi/CDNL1415/2.jpg","nom":"Hugo","comp":"pas mal aussi"}
+			,{"idCSV":4,"idClick":"Photo4","urlTof":"http://127.0.0.1/exos/livre-postnum/data/trombi/CDNL1415/13.jpg","nom":"Hélène","comp":"il confond son nom avec son mail..."}
+			,{"idCSV":15,"idClick":"Photo4","urlTof":"http://127.0.0.1/exos/livre-postnum/data/trombi/CDNL1415/13.jpg","Louis":"Hélène","comp":"il confond son nom avec son mail..."}
+			,{"idCSV":4,"idClick":"Photo4","urlTof":"http://127.0.0.1/exos/livre-postnum/data/trombi/CDNL1415/13.jpg","nom":"Hélène","comp":"il confond son nom avec son mail..."}
+			,{"idCSV":4,"idClick":"Photo4","urlTof":"http://127.0.0.1/exos/livre-postnum/data/trombi/CDNL1415/13.jpg","nom":"Hélène","comp":"il confond son nom avec son mail..."}
+			,{"idCSV":4,"idClick":"Photo4","urlTof":"http://127.0.0.1/exos/livre-postnum/data/trombi/CDNL1415/13.jpg","nom":"Hélène","comp":"il confond son nom avec son mail..."}
+			,{"idCSV":4,"idClick":"Photo4","urlTof":"http://127.0.0.1/exos/livre-postnum/data/trombi/CDNL1415/13.jpg","nom":"Hélène","comp":"il confond son nom avec son mail..."}
+			];
 
 		
 		function load(){
 		 	//charge l'IHM SVG
-		 	chargeIHM();
-
-		}
-
-		//charge le svg
-	    //merci à http://bl.ocks.org/KoGor/8162640
-	    function chargeIHM(){
-	    	queue()
+		 	//chargeIHM();
+		 	queue()
 	    		.defer(d3.xml, ficSVG, "image/svg+xml")
 	    		.await(IHMcharge);
-	    }
+	    	chargeData(ficCSV);
+		}
+
+
+		function chargeData(url){
+			d3.csv(url, function(error, data) {
+
+				dataProfil = data;
+				//affiche les données dans la console
+				// Compute the distinct nodes from the links.
+				dataProfil.forEach(function(d, i) {
+				    console.log(i+" : "+d.nom);
+				});				
+				
+			});
+		}
+
 	    function IHMcharge(error, xml){
 	    	//Adding our svg file to HTML document
 			var importedNode = document.importNode(xml.documentElement, true);
@@ -33,9 +56,15 @@
 		// fonction pour ajouter un écouteur à UN ÉLÉMENT
 		//merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
 		function ajoutelesevenementauxelements() { 
-		     var el = document.getElementById("Calque_1"); 
-		     el.addEventListener("click", afficheDetailEtu, false); 
-		   } 		
+		
+			for (var i = 0; i < arrIds.length; i++) {
+				//length = taille du tableau
+			     var el = document.getElementById(arrIds[i].idClick); 
+				 var j = i;
+			     el.addEventListener("click", afficheDetailEtu,false); 
+			    	
+			} 		
+		}	
 		
 		/*
 		 merci à http://www.commentcamarche.net/forum/affich-21135416-html-afficher-cacher-une-div-sur-clique-a
@@ -49,29 +78,33 @@
 				divInfo.style.display = 'none';
 		}
 		
-		function afficheDetailEtu(){
+		function afficheDetailEtu(evt){
 			//alert("OK");
 
-			var elemIma = document.getElementById('Calque_2');
-			var elemIma2 = document.getElementById('Calque_5');
-			elemIma2.setAttribute("fill","#ffffff");
+			//récupère la balise image grand format
+			var elemIma = document.getElementById('Cadre');
+			//récupère les information de l'étudiant
+			var item = getElementArr(arrIds, "idClick", evt.currentTarget.id);
+			//Récupérer les données du csv
+			var itemCSV = dataProfil[item.idCSV];
+			//mettre à jour l'image
+			elemIma.setAttribute("xlink:href",item.urlTof);
+			//change les textes
+			var elemTxt = document.getElementById('TxtNom');
+			elemTxt.textContent=itemCSV["Prénom"]+" "+itemCSV["nom"];
+			elemTxt = document.getElementById('Cadre_1');
+			elemTxt.textContent=itemCSV["Envies"];
 
-			//merci à https://developer.mozilla.org/fr/docs/DOM/element.childNodes
-			if (elemIma.hasChildNodes())
-				// On vérifie d'abord si l'objet n'est pas vide, c.-à-d. s'il a des enfants
-				{
-				  var collEnfants = elemIma.childNodes;
-				  for (var i = 0; i < collEnfants.length; i++) 
-				  {
-					   // faire quelque chose avec chaque enfant en tant que collEnfants[i]
-					   // NOTE : la liste n'est pas une copie, l'ajout ou le retrait 
-					   // d'éléments modifiera la liste
-					   if(collEnfants[i].nodeName=="rect")
-						   collEnfants[i].setAttribute("fill","#751299");
-				  }
-				  
-				}
-			
+			//elemTxt.textContent="yozd";
+
+
+		}
+
+		function getElementArr(arr, prop, val){
+			for (var i = 0; i < arr.length; i++) {
+				if(arr[i][prop]==val)return arr[i];
+			}
+			return false;
 		}
 
 		
