@@ -18,9 +18,16 @@ class TrombinoscopeController extends Zend_Controller_Action
 
     public function samszoAction()
     {
-    	$this->view->data = "bonjour";
+    		$dbUti = new Model_DbTable_Flux_Uti();
+    		$this->view->data = $dbUti->findByRole($this->_getParam('role', "THYP 14-15"),true, true);
+    		
     }
-
+    public function ajoutabscenceAction()
+    {
+    		//TODO: ajouter l'enregistrement dans la base	
+  		$this->view->idUti = $this->_getParam('idUti'); 		
+    }
+    
     public function masseixkevinAction(){
     }
 	 public function abbounisrineAction(){

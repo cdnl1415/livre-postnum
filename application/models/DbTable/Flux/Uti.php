@@ -215,23 +215,28 @@ class Model_DbTable_Flux_Uti extends Zend_Db_Table_Abstract
      *
      * @param varchar $role
      * @param boolean $img 
+     * @param boolean $login 
      * 
      * @return array
      */
-    public function findByRole($role, $img=false)
+    public function findByRole($role, $img=false, $login=false)
     {
         $query = $this->select()
 			->from( array("u" => "flux_uti"),array("login","uti_id") )                           
             ->where( "u.role = ?", $role );
 		if($img){
-        	$query->setIntegrityCheck(false) //pour pouvoir sélectionner des colonnes dans une autre table
-        		->joinInner(array('ud' => 'flux_utidoc'),'ud.uti_id = u.uti_id',array())
-				->joinInner(array('d' => 'flux_doc'),"d.doc_id = ud.doc_id AND type = 'foaf:img'",array('doc_id','url'));
+			if($login)
+		        	$query->setIntegrityCheck(false) //pour pouvoir sélectionner des colonnes dans une autre table
+					->joinInner(array('d' => 'flux_doc'),"d.titre = u.login",array('doc_id','url'));
+			else{
+		        	$query->setIntegrityCheck(false) //pour pouvoir sélectionner des colonnes dans une autre table
+		        		->joinInner(array('ud' => 'flux_utidoc'),'ud.uti_id = u.uti_id',array())
+						->joinInner(array('d' => 'flux_doc'),"d.doc_id = ud.doc_id AND type = 'foaf:img'",array('doc_id','url'));
+			}
 		}
             
         return $this->fetchAll($query)->toArray(); 
     }
-    
     /**
      * renoie les valeur distinct d'une colone
      *
