@@ -3,7 +3,7 @@
 class TrombinoscopeController extends Zend_Controller_Action
 {
 	var $rss = array("CDNL1415"=>"https://picasaweb.google.com/data/feed/base/user/112098438788633053665/albumid/6064761146942390433?alt=rss&kind=photo&authkey=Gv1sRgCJG9i8HQ-b61kwE&hl=en_US"
-		,"THYP1415"=>"https://picasaweb.google.com/data/feed/base/user/107401320610499259896/albumid/6065229773950541889?alt=rss&kind=photo&authkey=Gv1sRgCNak7e60l-7VlgE&hl=fr"
+		,"THYP1415"=>"http://picasaweb.google.com/data/feed/base/user/107401320610499259896/albumid/6065229773950541889?alt=rss&kind=photo&authkey=Gv1sRgCNak7e60l-7VlgE&hl=fr"
 		);
 
     public function init()
@@ -62,6 +62,35 @@ class TrombinoscopeController extends Zend_Controller_Action
     public function joursoffAction(){
     
     }
+    public function sauvefluxthypAction(){
+        
+        
+        $absence = new  Model_DbTable_Absence_Absence();
+        $rs = $absence->fetchAll();
+        $this->view->absence = $rs;        
+               
+        
+        $this->dbD = new Model_DbTable_Flux_Doc();
+	$trombi = $this->_getParam('trombi', 0);
+        
+        
+        
+        $this->view->trombi =  $trombi;   
+        $chemin = $_SERVER['DOCUMENT_ROOT']."/livre-postnum/data/trombi/".$trombi;
+	$this->view->chemin = $chemin;
+        
+        $url = $this->rss['THYP1415']; 
+        $xml = simplexml_load_file($url);
+        $titre = $xml->channel->title;	    		
+        //enregistre le flux rss comme document
+        $data = array("url"=>$url, "titre"=>$titre, "data"=>$xml->asXML());
+        $this->view->data = $data; 
+        
+        $this->dbD->ajouter($data,true,true);
+        
+        
+    }
+    
 
     public function sauvefluxAction()
     {

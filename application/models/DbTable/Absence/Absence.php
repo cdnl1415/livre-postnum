@@ -17,7 +17,7 @@ require_once 'Zend/Db/Table/Abstract.php';
  * @copyright  2008 Gabriel Malkas
  * @license    "New" BSD License
  */
-class Absence extends Zend_Db_Table_Abstract
+class Model_DbTable_Absence_Absence extends Zend_Db_Table_Abstract
 {
     
     /*
