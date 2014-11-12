@@ -7,6 +7,8 @@
 -- Version du serveur: 5.1.44
 -- Version de PHP: 5.3.1
 
+USE flux_etu;
+
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 
