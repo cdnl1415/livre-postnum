@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Explorateur de palette</title>
+	    <script type="text/javascript" src="js/d3.js"></script>
+	    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	    <script type="text/javascript" src="js/queue.v1.min.js" ></script>
+		<script type="text/javascript">
+
+		var ficSVG = "svg/palettemoudhafer.svg";
+		//var ficSVG = "svg/tagcloudAccueil.svg";
+
+		var dataProfil;
+		
+		var arrIds = [{"idEle":"g3652","fonction":changeFillPath,"params":[{"mes":"coucou"}]}];
+		
+		function load(){
+		 	//charge l'IHM SVG
+		    //merci à http://bl.ocks.org/KoGor/8162640
+		    	queue()
+		    		.defer(d3.xml, ficSVG, "image/svg+xml")
+		    		.await(IHMcharge);
+		    //	chargeData(ficCSV);
+		}
+		
+	    function IHMcharge(error, xml){
+	    		//Adding our svg file to HTML document
+			var importedNode = document.importNode(xml.documentElement, true);
+    	  		d3.select("#viz").node().appendChild(importedNode);	    	    	  	
+
+    	  		ajouteEvent();
+	    }		
+	    
+		// fonction pour ajouter un écouteur à UN ÉLÉMENT
+		//merci à https://developer.mozilla.org/fr/docs/DOM/element.addEventListener
+		function ajouteEvent() { 
+		
+			for (var i = 0; i < arrIds.length; i++) {
+				//length = taille du tableau
+			     var el = document.getElementById(arrIds[i].idEle); 
+			     el.addEventListener("click", arrIds[i].fonction,false); 			    	
+			} 		
+		}
+
+		function chargeData(){
+			alert("toto");	
+		}
+
+		function sauveSVG(){
+			var svg = document.getElementById("viz").firstChild;
+			svg = svg.outerHTML;
+			var p = {"svg":svg,"titre":"mon beau svg","url":ficSVG};
+			$.post("explo/sauvesvg", p,
+					 function(data){
+						alert(data);
+					 });
+			
+		}
+		
+		function changeFillPath(evt){
+			var idEleEvt = evt.currentTarget.id;
+			/*
+			var eleChild = evt.currentTarget.children;
+			for (var i = 0; i < eleChild.length; i++) {
+				var el = eleChild[i];
+				if(el.localName=="path"){
+					el.setAttribute("style","fill:red");
+				}
+			}
+			*/
+			d3.select("#"+idEleEvt)
+				.selectAll("path")
+				.style("fill","red");
+		}
+	    
+		function getElementArr(arr, prop, val){
+			for (var i = 0; i < arr.length; i++) {
+				if(arr[i][prop]==val)return arr[i];
+			}
+			return false;
+		}
+		
+		</script>
+	</head>
+	<body onload="load();">
+		<div onclick="sauveSVG();" >SAUVE SVG</div>
+		<div id="viz" ></div>
+	</body>
+</html>

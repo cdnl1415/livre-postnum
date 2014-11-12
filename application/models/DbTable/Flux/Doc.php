@@ -82,7 +82,7 @@ class Model_DbTable_Flux_Doc extends Zend_Db_Table_Abstract
     			$dt["note"] = $data["note"];
     			$this->edit($id[0]["doc_id"], $dt);
     		}
-    		*/
+    		*/    		
     		$id = $id[0]["doc_id"];
     	}
     	if($rs)
