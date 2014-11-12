@@ -91,6 +91,25 @@ class TrombinoscopeController extends Zend_Controller_Action
         
     }
     
+    public function sauveabsenceAction() {
+        
+		$this->db = new  Model_DbTable_Absence_Absence();
+                     
+				if($_POST)
+				{
+				/* VALUES */
+				$date= date('Y-m-d H:i:s');
+				$nom_absent=$_POST['nom_absent'];
+                                ajout_absence($date, $nom_absent);					
+                                
+                                } else { 
+ 
+						header('HTTP/1.1 500 Looks like mysql error, could not insert record!');
+						exit();
+				}
+                    
+    }
+    
 
     public function sauvefluxAction()
     {

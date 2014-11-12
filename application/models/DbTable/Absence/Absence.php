@@ -132,5 +132,21 @@ class Model_DbTable_Absence_Absence extends Zend_Db_Table_Abstract
         return $db->fetchRow($query); 
     }
     
+   function ajout_absence($date,$nom_absent){
+	try {
+		$db = Zend_Registry::get('dbAdapter');
+		
+		$resultat= $db->prepare("INSERT INTO absence (date,nom_absent) VALUES (?,?)");
+		$resultat->bindValue(1, $date, PDO::PARAM_INT);    
+		$resultat->bindValue(2, $nom_absent, PDO::PARAM_STR);    
+		$resultat->execute();
+		return true;
+	} 
+	catch (PDOException $exc) 
+	{
+		echo $exc->getMessage();
+		return false;
+	}  
+}
     
 }
